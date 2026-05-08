@@ -1,0 +1,20 @@
+{
+  "name": "leafbridge",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "pnpm -r build",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm -r test",
+    "lint": "pnpm -r lint",
+    "desktop:dev": "pnpm --filter @leafbridge/desktop tauri dev",
+    "desktop:build": "pnpm --filter @leafbridge/desktop tauri build"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "packageManager": "pnpm@10.26.2"
+}

@@ -1,0 +1,48 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tile" x1="156" y1="116" x2="868" y2="918" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F5F6FB"/>
+    </linearGradient>
+    <linearGradient id="mark" x1="388" y1="196" x2="646" y2="776" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#263E9B"/>
+      <stop offset="0.34" stop-color="#75B7E7"/>
+      <stop offset="0.62" stop-color="#F3D77D"/>
+      <stop offset="0.84" stop-color="#F38A5F"/>
+      <stop offset="1" stop-color="#B54A86"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(462 398) rotate(72) scale(300 214)">
+      <stop stop-color="#FFFFFF" stop-opacity="0.46"/>
+      <stop offset="0.58" stop-color="#FFFFFF" stop-opacity="0.1"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="fold" x1="512" y1="236" x2="512" y2="736" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1E317C" stop-opacity="0.42"/>
+      <stop offset="0.56" stop-color="#39436D" stop-opacity="0.1"/>
+      <stop offset="1" stop-color="#7B2D73" stop-opacity="0.24"/>
+    </linearGradient>
+    <linearGradient id="bridge" x1="252" y1="596" x2="772" y2="596" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#DCE3F2" stop-opacity="0.92"/>
+      <stop offset="0.5" stop-color="#EEF1FA" stop-opacity="0.96"/>
+      <stop offset="1" stop-color="#DCE3F2" stop-opacity="0.92"/>
+    </linearGradient>
+    <filter id="tileShadow" x="22" y="34" width="980" height="980" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="26" stdDeviation="34" flood-color="#17203A" flood-opacity="0.16"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="5" flood-color="#17203A" flood-opacity="0.1"/>
+    </filter>
+    <filter id="markShadow" x="178" y="154" width="668" height="674" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#21305E" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#tileShadow)">
+    <rect x="74" y="74" width="876" height="876" rx="204" fill="url(#tile)"/>
+  </g>
+
+  <g filter="url(#markShadow)">
+    <path d="M254 650C326 540 416 492 512 492C608 492 698 540 770 650" stroke="url(#bridge)" stroke-width="76" stroke-linecap="round"/>
+    <path d="M512 206C615 292 715 414 728 552C735 631 707 694 661 730C628 756 588 752 552 732C529 719 495 719 472 732C436 752 396 756 363 730C317 694 289 631 296 552C309 414 409 292 512 206Z" fill="url(#mark)"/>
+    <path d="M512 206C615 292 715 414 728 552C735 631 707 694 661 730C628 756 588 752 552 732C529 719 495 719 472 732C436 752 396 756 363 730C317 694 289 631 296 552C309 414 409 292 512 206Z" fill="url(#glow)"/>
+    <path d="M512 238C510 336 511 435 512 536C513 613 512 681 512 724" stroke="url(#fold)" stroke-width="24" stroke-linecap="round"/>
+  </g>
+</svg>

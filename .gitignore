@@ -1,0 +1,22 @@
+.DS_Store
+node_modules/
+node_modules 2/
+dist/
+coverage/
+*.log
+
+# Build output
+apps/desktop/dist/
+apps/desktop/src-tauri/target/
+apps/desktop/src-tauri/gen/
+*.dmg
+*.app
+
+# Local duplicate/backups from early scaffolding
+packages 2/
+apps/desktop/src-tauri/app-icon 2.svg
+apps/desktop/src-tauri/app-icon 3.svg
+
+# Local env
+.env
+.env.*
