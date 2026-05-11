@@ -63,6 +63,25 @@ The core package is reusable for future clients, such as a VS Code extension, bu
 
 The expected remote name is `overleaf`, though it can be changed in Settings.
 
+## Connecting A Project
+
+Clone an Overleaf project locally, then make the Overleaf Git remote explicit:
+
+```sh
+git clone https://git.overleaf.com/<project-id> <folder-name>
+cd <folder-name>
+git remote rename origin overleaf
+```
+
+For an existing Git repository, add the Overleaf remote:
+
+```sh
+git remote add overleaf https://git.overleaf.com/<project-id>
+git fetch overleaf
+```
+
+More setup notes are in [docs/setup-overleaf.md](docs/setup-overleaf.md).
+
 ## Development
 
 Install dependencies:
@@ -110,9 +129,15 @@ The core package includes unit tests and real Git integration tests. The integra
 - push using `HEAD:<branch>`
 - no force-push, reset, or stash commands
 
+## Release And QA
+
+Release readiness is tracked in [docs/release.md](docs/release.md).
+
+Reliability beta QA is tracked in [docs/reliability-beta-qa.md](docs/reliability-beta-qa.md). That checklist covers real Overleaf projects, incoming-only edits, prepared local updates, overlap risk, missing setup states, project switching, and Activity logging.
+
 ## Current Status
 
-LeafBridge is in a reliability-beta stage. The core bridge flows are implemented, the desktop app is usable, and the next major work is real-world QA against multiple Overleaf projects and release packaging.
+LeafBridge is in a reliability-beta stage. The core bridge flows are implemented, the desktop app is usable, and CI now covers tests, typecheck, lint, and package build. macOS Tauri packaging is available as a manual or version-tag GitHub Actions job.
 
 Deferred items:
 
@@ -123,4 +148,4 @@ Deferred items:
 
 ## License
 
-No license has been selected yet.
+LeafBridge is released under the [MIT License](LICENSE).
